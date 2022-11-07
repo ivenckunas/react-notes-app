@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1rem;
+}
+
+.dark-mode {
+  background-color: rgb(22, 22, 22);
+}
+
+.dark-mode h1 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.search {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: rgb(238, 238, 238);
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search input {
+  outline: none;
+  border: none;
+  background-color: rgb(238, 238, 238);
+}
+
+.notes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.note {
+  background-color: #fef68a;
+  border-radius: 8px;
+  padding: 1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-icon {
+  font-size: 1.3rem;
+}
+
+.delete-icon:hover {
+  cursor: pointer;
+  color: rgb(112, 112, 112);
+}
+
+.add-note {
+  background-color: rgb(71, 224, 217);
+}
+
+.add-note textarea {
+  border: none;
+  resize: none;
+  background-color: rgb(71, 224, 217);
+  outline: none;
+}
+
+.save {
+  background-color: rgb(216, 216, 216);
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.save:hover {
+  background-color: rgb(238, 238, 238)
 }
